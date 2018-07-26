@@ -10,10 +10,16 @@ use App\Comment;
 
 use App\Post;
 
-Use Session;
+use Session;
 
 class CommentController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'store']);
+    }
+
     /**
      * Display a listing of the resource.
      *

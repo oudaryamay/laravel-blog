@@ -19,7 +19,7 @@ class Post extends Model
 		return $this->belongsToMany('App\Tag');
 	}
 
-	public function comments() {
+	public function comment() {
 		 return $this->hasMany('App\Comment');
 	}
 

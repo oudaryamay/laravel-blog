@@ -38,7 +38,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::resource('tags', 'TagController', ['except' => 'create']);
 
 	//Comments
-	Route::post('comment/{$post->id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
+	Route::post('comment/{post_id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
 	Route::get('comment/{id}/edit', ['uses' => 'CommentController@edit', 'as' => 'comment.edit']);
 	Route::put('comment/{id}', ['uses' => 'CommentController@update', 'as' => 'comment.update']);
 	Route::delete('comment/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comment.destroy']);

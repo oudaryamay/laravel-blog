@@ -23,8 +23,8 @@
                </div>
            
                   <!-- Comments Form -->
-                  <div class="card my-4">
-                                      @if (Session::has('success'))
+
+                  @if (Session::has('success'))
 
                   <div class="alert alert-success" role="alert">
                     <strong>Success : </strong> {{ Session::get('success') }}
@@ -47,6 +47,8 @@
                   </div>
 
                   @endif
+                  <div class="card my-4">
+
                      <h5 class="card-header">Leave Your Comment</h5>
                      <div class="card-body">
                         {{ Form::open(['route' => ['comment.store', $post->id], 'method' => 'POST' ]) }}
@@ -69,14 +71,18 @@
                            {{ Form::close() }}
                       </div>
                   </div>
+                   <h3 class="comments-title"><i class="fa fa-comments"></i>  {{ $post->comment()->count() }} Comments</h3>
                   <!-- Single Comment -->
+                @foreach($post->comment as $com)
                   <div class="media mb-4">
-                     <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                     <img class="d-flex mr-3 rounded-circle" src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($com->email))) . "?s=50&d=monsterid" }}" alt="">
                      <div class="media-body">
-                        <h5 class="mt-0">Commenter Name</h5>
-                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                        <h5 class="mt-0">{{ $com->name }} | {{ date('F dS, Y - g:iA' ,strtotime($com->created_at)) }}</h5>
+                        <p> {{ $com->comment }}</p>
                      </div>
                   </div>
+                   @endforeach
+
                </div>
                <div class="button-wrapper"><a class="button w-button" href="/all-posts">←&nbsp;View all posts</a></div>
-@endsection
+              @endsection
