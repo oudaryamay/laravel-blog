@@ -27,17 +27,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $comments= Comment::orderBy('id', 'desc')->paginate(10);
+        return view ('admin.comment.comments')->withComments($comments);
     }
 
     /**
@@ -71,17 +62,6 @@ class CommentController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -90,7 +70,7 @@ class CommentController extends Controller
     public function edit($id)
     {
         $comment = Comment::find($id);
-        return view('comments.edit')->withComment($comment);
+        return view('admin.comment.edit')->withComment($comment);
     }
 
     /**
@@ -102,16 +82,25 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-           $comment = Comment::find($id);
+        $comment = Comment::find($id);
 
-        $this->validate($request, array('comment' => 'required'));
+        $this->validate($request, array(
+            'comment' => 'required',
+            'name'    => 'required',
+            'email'   => 'required'
+
+        ));
 
         $comment->comment = $request->comment;
+        $comment->name = $request->name;
+        $comment->email = $request->email;
+        $comment->approved = $request->approved;
+
         $comment->save();
 
-        Session::flash('success', 'Comment updated');
+        Session::flash('success', 'The Comment has been successfullly updated');
 
-        return redirect()->route('posts.show', $comment->post->id);
+        return redirect()->route('comment.edit', $comment->id);
     }
 
     /**
@@ -139,8 +128,8 @@ class CommentController extends Controller
         $post_id = $comment->post->id;
         $comment->delete();
 
-        Session::flash('success', 'Deleted Comment');
+        Session::flash('success', 'The comment has been successfully deleted.');
 
-        return redirect()->route('posts.show', $post_id);
+        return redirect()->route('comment.index');
     }
 }

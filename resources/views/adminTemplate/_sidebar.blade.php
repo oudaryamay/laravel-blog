@@ -14,6 +14,11 @@
                       <li>{{ Html::linkRoute('tags.index', 'Tags', array(), []) }}</li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-comments"></i> Comments <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li>{{ Html::linkRoute('comment.index', 'All Comments', array(), []) }}</li>
+                    </ul>
+                  </li>
                   <li><a><i class="fa fa-clone"></i> Pages <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li>{{ Html::linkRoute('pages.index', 'All Pages', array(), []) }}</li>

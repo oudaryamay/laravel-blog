@@ -78,7 +78,7 @@
                      <img class="d-flex mr-3 rounded-circle" src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($com->email))) . "?s=50&d=monsterid" }}" alt="">
                      <div class="media-body">
                         <h5 class="mt-0">{{ $com->name }} | {{ date('F dS, Y - g:iA' ,strtotime($com->created_at)) }}</h5>
-                        <p> {{ $com->comment }}</p>
+                        <p> {!! $com->comment !!}</p>
                      </div>
                   </div>
                    @endforeach

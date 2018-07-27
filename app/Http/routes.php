@@ -39,10 +39,12 @@ Route::group(['middleware' => ['web']], function () {
 
 	//Comments
 	Route::post('comment/{post_id}', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
-	Route::get('comment/{id}/edit', ['uses' => 'CommentController@edit', 'as' => 'comment.edit']);
-	Route::put('comment/{id}', ['uses' => 'CommentController@update', 'as' => 'comment.update']);
-	Route::delete('comment/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comment.destroy']);
-	Route::get('comment/{id}/delete', ['uses' => 'CommentController@delete', 'as' => 'comment.delete']);
+	
+	//Comments for admin end
+	Route::get('ob-admin/comment',['uses' => 'CommentController@index', 'as' => 'comment.index']);
+	Route::get('ob-admin/comment/{id}/edit', ['uses' => 'CommentController@edit', 'as' => 'comment.edit']);
+	Route::put('ob-admin/comment/{id}', ['uses' => 'CommentController@update', 'as' => 'comment.update']);
+	Route::delete('ob-admin/comment/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comment.destroy']);
 
 	Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug','[\w\d\-\_]+');
 	Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
