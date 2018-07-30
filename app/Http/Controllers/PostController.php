@@ -84,7 +84,10 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->slug = $request->slug;
         $post->body = Purifier::clean($request->body);
+
+        if(($request->category_id) != null) :
         $post->category_id = $request->category_id;
+        endif;
 
         if ($request->hasFile('featured_img')) {
           $image = $request->file('featured_img');
@@ -97,7 +100,9 @@ class PostController extends Controller
 
         $post->save(); 
 
+        if(($request->tags) != null) :
         $post->tags()->sync($request->tags, false);
+        endif;
 
         //Success message
 

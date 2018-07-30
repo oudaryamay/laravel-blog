@@ -24,10 +24,12 @@ class AdminController extends Controller
     $pages = Page::count();
     $categories = Category::count();
 
-   $allposts= Post::orderBy('id', 'desc');
+   //$allposts= Post::orderBy('id', 'desc');
    $rposts = Post::orderBy('id', 'desc')->take(5)->get();
+   $rcomments = Comment::orderBy('id', 'desc')->take(5)->get();
+   $rpages = Page::orderBy('id', 'desc')->take(5)->get();
 
-    return view('admin.index')->withPosts($posts )->withComments($comments)->withPages($pages)->withCategories($categories)->withRposts($rposts);
+    return view('admin.index')->withPosts($posts )->withComments($comments)->withPages($pages)->withCategories($categories)->withRposts($rposts)->withRcomments($rcomments)->withRpages($rpages);
 }
 
 }

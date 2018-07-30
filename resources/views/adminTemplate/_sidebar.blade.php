@@ -3,7 +3,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
+                      <li>{{ Html::linkRoute('admin.index', 'Dashboard', array(), []) }}</li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Posts <span class="fa fa-chevron-down"></span></a>

@@ -84,7 +84,7 @@
                   {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                    <div class="divider-dashed"></div>
 
-                   {{ Form::label('slug', 'Slug *') }}
+                   {{ Form::label('slug', 'Slug *') }} ( URI : <a target="_blank" href="{{ route('blog.single', $post->slug) }}">{{ route('blog.single', $post->slug) }}</a> )
                   {{ Form::text('slug', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
                   <div class="divider-dashed"></div>
                   
@@ -173,7 +173,9 @@
                       </div>
                         <div class="x_content">
                           <div class="form-group">
+                            <?php if (($post->image) != null) : ?>
                             <img src="{{url('/uploads/' . $post->image)}}" width="170" height="150">
+                          <?php endif; ?>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                               <br>
                               {{ Form::label('featured_img', 'Upload a image') }}

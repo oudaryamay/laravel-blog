@@ -89,11 +89,19 @@
                           </td>
                             <td class="post-id">{{$post->id}}</td>
                             <td class="post-title">{{$post->title}}</td>
+                            <?php if (( $post->category->name) != null) { ?>
                             <td class="cat-name">{{ $post->category->name }}</td>
+                            <?php } else { ?>
+                            <td class="cat-name">--</td>
+                            <?php } ?>
+                            <?php if (($post->tags) != null) { ?>
                             <td class="tag-name">@foreach ($post->tags as $tag)
                               <span class="label label-success">{{ $tag->name }}</span>
                               @endforeach
                             </td>
+                            <?php } else { ?>
+                            <td class="tag-name"> -- </td>
+                            <?php } ?>
                             <td class="post-slug">{{$post->slug}}</td>
                             <td class="post-date">{{date('M j, Y', strtotime($post->created_at))}}</td>
                             <td class="post-edit">
