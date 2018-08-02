@@ -8,11 +8,12 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">{{ Auth::user()->name }}
+                    <img src="{{url('/uploads/' . Auth::user()->profile_image)}}" alt="">{{ Auth::user()->name }}
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>{{ Html::linkRoute('profile.edit', 'My Profile', array(), []) }}</li>
+                     <li>{{ Html::linkRoute('profile.password', 'Change Password', array(), []) }}</li>
                     <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>

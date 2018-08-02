@@ -18,6 +18,12 @@ Route::group(['middleware' => ['web']], function () {
 	Route::post('login', 'Auth\AuthController@postLogin');
 	Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 
+	//Profile update
+	Route::get('ob-admin/profile/', ['uses' => 'ProfileController@getEdit', 'as' => 'profile.edit']);
+	Route::put('ob-admin/profile/{id}', ['uses' => 'ProfileController@getUpdate', 'as' => 'profile.update']);
+	//password reset
+	Route::get('ob-admin/profile/reset-password', ['uses' => 'ProfileController@getPassword', 'as' => 'profile.password']);
+
 	// Registration Routes
 	Route::get('auth/register', 'Auth\AuthController@getRegister');
 	Route::post('auth/register', 'Auth\AuthController@postRegister');

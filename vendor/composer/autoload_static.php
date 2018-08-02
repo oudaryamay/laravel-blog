@@ -301,8 +301,8 @@ class ComposerStaticInitd3c048971bdfde420483467555329ee2
     );
 
     public static $classMap = array (
-        'AddColumnsTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_11_074753_add_columns_table.php',
         'AddImageColToPosts' => __DIR__ . '/../..' . '/database/migrations/2018_07_10_100629_add_image_col_to_posts.php',
+        'AddProfilePicColumnToUserTable' => __DIR__ . '/../..' . '/database/migrations/2018_08_01_125123_add_profile_pic_column_to_user_table.php',
         'AddSlugColumnToCategoryTable' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_100541_add_slug_column_to_category_table.php',
         'AddSlugToPosts' => __DIR__ . '/../..' . '/database/migrations/2018_06_25_064349_add_slug_to_posts.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_062044_create_categories_table.php',
