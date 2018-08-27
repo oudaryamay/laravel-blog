@@ -161,7 +161,7 @@
 </div>
 <script>
   function mediaDelete() {
-      if(!confirm("Are You Sure to delete this!"))
+    return confirm('Are you sure to delete?');
       event.preventDefault();
   }
  </script>

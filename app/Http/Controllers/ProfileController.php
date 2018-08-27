@@ -77,10 +77,20 @@ class ProfileController extends Controller
 
     public function getPassword() {
 
-        $user_id = Auth::id();
-        $user = User::find($user_id);
+        //$user_id = Auth::id();
+        //$user = User::find($user_id);
 
-        return view('admin.profile.pwd')->withUser($user);
+        return view('admin.profile.pwd');
+
+    }
+
+    public function updatePassword() {
+
+        $user_id = Auth::id();
+
+         $this->validate($request, array(
+            'new_password'         => 'required|max:255'
+         ));
 
     }
 

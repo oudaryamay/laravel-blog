@@ -31,18 +31,19 @@
                </ul>
             </div>
             @endif
-            {!! Form::model($user, ['route' => ['profile.update',  $user->id], 'method' => 'PUT', 'files' => 'true']) !!}
+            {!! Form::open(['route' => ['password.update'], 'method' => 'PUT']) !!}
 
-            {{ Form::label('password', "New Password:") }}
-            {{ Form::password('password', null, ['class' => 'form-control']) }}
+            {{ Form::label('new_password', "New Password:") }}
+            {{ Form::password('new_password', ['class' => 'form-control', 'id' => 'shwpwd']) }}
             <div class="divider-dashed"></div>
             {{ Form::label('password_confirmation', 'Confirm New Password:') }}
-            {{ Form::text('password_confirmation', null, ['class' => 'form-control']) }}
+            {{ Form::password('password_confirmation', ['class' => 'form-control', 'id' => 'shwpwd']) }}
             <div class="divider-dashed"></div>
             {{ Form::label('old_password', 'Old Password:') }}
-            {{ Form::password('old_password', null, ['class' => 'form-control']) }}
+            {{ Form::password('old_password', ['class' => 'form-control', 'id' => 'shwpwd']) }}
             <div class="divider-dashed"></div>
             {{ Form::submit('Reset Password', ['class' => 'btn btn-success btn-block']) }}
+            
             {!! Form::close() !!}
          </div>
       </div>

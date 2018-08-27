@@ -10,6 +10,10 @@
                      <a class="nav-link w-nav-link" href="/">Home
                      </a>
                   </li>
+                   <li class="nav-item {{ Request::is('shop') ? 'active' : '' }}">
+                     <a class="nav-link w-nav-link" href="/shop">Shop
+                     </a>
+                  </li>
                   <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
                      <a class="nav-link" href="/about">About</a>
                   </li>

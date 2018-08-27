@@ -13,6 +13,16 @@
 
 Route::group(['middleware' => ['web']], function () {
 
+	//Front-end product route for details page
+	Route::get('shop', ['uses' => 'ShopController@getIndex', 'as' => 'shop.index']);
+
+	//Front-end product route for single page
+	Route::get('shop/{slug}', ['as' => 'shop.single', 'uses' => 'ShopController@getSingle'])->where('slug','[\w\d\-\_]+');
+
+	//Product route
+	Route::resource('ob-admin/products','ProductController',[
+    'except' => [ 'show' ]]);	
+
 	//Authentication route
 	Route::get('login',['as' => 'login', 'uses' => 'Auth\AuthController@getLogin']);
 	Route::post('login', 'Auth\AuthController@postLogin');
@@ -23,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::put('ob-admin/profile/{id}', ['uses' => 'ProfileController@getUpdate', 'as' => 'profile.update']);
 	//password reset
 	Route::get('ob-admin/profile/reset-password', ['uses' => 'ProfileController@getPassword', 'as' => 'profile.password']);
+	Route::put('ob-admin/profile/reset-password/update', ['uses' => 'ProfileController@updatePassword', 'as' => 'password.update']);
 
 	// Registration Routes
 	Route::get('auth/register', 'Auth\AuthController@getRegister');

@@ -31,6 +31,12 @@
                       <li>{{ Html::linkRoute('media.new', 'Add New', array(), []) }}</li>
                       </ul>
                   </li>
+                   <li><a><i class="fa fa-shopping-cart"></i> Products <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li>{{ Html::linkRoute('ob-admin.products.index', 'All products', array(), []) }}</li>
+                      <li>{{ Html::linkRoute('ob-admin.products.create', 'Add New', array(), []) }}</li>
+                      </ul>
+                  </li>
                </ul>
               </div>
             </div>

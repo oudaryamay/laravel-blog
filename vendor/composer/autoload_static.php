@@ -311,6 +311,7 @@ class ComposerStaticInitd3c048971bdfde420483467555329ee2
         'CreatePagesTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_19_082857_create_pages_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePostTagTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_04_125353_create_post_tag_table.php',
+        'CreateProductTable' => __DIR__ . '/../..' . '/database/migrations/2018_08_22_120630_create_product_table.php',
         'CreateTagTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_04_123535_create_tag_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
