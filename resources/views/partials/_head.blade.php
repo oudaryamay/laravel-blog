@@ -9,6 +9,8 @@
       <title>Blog @yield('title')</title>
     	{{ Html::style('front/css/bootstrap.min.css') }}
     	{{ Html::style('front/css/style.css') }}
+       <!-- Font Awesome -->
+      {{ Html::style('front/css/font-awesome.min.css') }}
     	 @yield('stylesheets')
    </head>
    <body>

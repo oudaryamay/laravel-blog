@@ -13,6 +13,12 @@
 
 Route::group(['middleware' => ['web']], function () {
 
+	//checkout controller
+	Route::get('/checkout','ShopController@checkout');
+
+	//cart controller
+	Route::post('cart', ['uses' => 'ShopController@cart', 'as' => 'shop.cart']);
+	Route::get('/cart','ShopController@cart');
 	//Front-end product route for details page
 	Route::get('shop', ['uses' => 'ShopController@getIndex', 'as' => 'shop.index']);
 

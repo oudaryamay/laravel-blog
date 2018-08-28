@@ -124,7 +124,12 @@ figcaption {
   font-weight: 300;
   text-align: center;
 }
-
+body {
+    min-height: 100%;
+}
+a, a:link{
+  text-decoration: none;
+}
 .button {
   display: inline-block;
   padding: 11px 20px;

@@ -158,6 +158,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Mews\Purifier\PurifierServiceProvider::class,
+        //shopping cart
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
     ],
 
@@ -209,6 +211,8 @@ return [
         'Purifier' => Mews\Purifier\Facades\Purifier::class, 
         'Image' => Intervention\Image\Facades\Image::class,
         'Input' => Illuminate\Support\Facades\Input::class,
+        //shopping cart
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
     ],
 

@@ -23,6 +23,9 @@
                   <li class="nav-item {{ Request::is('blog') ? 'active' : '' }}">
                      <a class="nav-link" href="/blog">Blog</a>
                   </li>
+                  <li class="nav-item {{ Request::is('cart') ? 'active' : '' }}">
+                     <a class="nav-link" href="/cart">Cart&nbsp;<span class="badge badge-success"><?php if(!empty ($cart)) : echo count($cart); endif; ?></span></a>
+                  </li>
                </ul>
             </div>
          </div>
