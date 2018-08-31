@@ -24,9 +24,22 @@
                      <a class="nav-link" href="/blog">Blog</a>
                   </li>
                   <li class="nav-item {{ Request::is('cart') ? 'active' : '' }}">
-                     <a class="nav-link" href="/cart">Cart&nbsp;<span class="badge badge-success"><?php if(!empty ($cart)) : echo count($cart); endif; ?></span></a>
+                     <a class="nav-link" href="/cart">Cart&nbsp;<span class="badge badge-success"><?php 
+                     $cart = Session::get('cart');
+                     if(!empty ($cart)) : echo count($cart); endif; 
+
+                     ?></span></a>
                   </li>
-               </ul>
+                  <li class="nav-item {{ Request::is('register') ? 'active' : '' }}">
+                     <a class="nav-link" href="/register">Register</a>
+                  </li>
+                   <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
+                     <a class="nav-link" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item {{ Request::is('logout') ? 'active' : '' }}">
+                     <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
+                  </li>
+                  </ul>
             </div>
          </div>
       </nav>

@@ -11,7 +11,9 @@
 <section id="cart_items">
   
         <div class="table-responsive cart_info">
-        	<?php  //echo '<pre>'; print_r($cart); echo '</pre>';  ?>
+        	<?php  //echo '<pre>'; print_r($cart); echo '</pre>';
+            //$cart = Cart::instance(auth()->user()->id)->content();
+            ?>
             @if(count($cart))
             <table class="table table-condensed">
                 <thead>
@@ -59,10 +61,29 @@
                         </td>
                     </tr>
                     @endforeach
-                    @else
+                    
+                </tbody>
+
+                <tfoot>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+            <td>Subtotal</td>
+            <td><?php echo Cart::subtotal(); ?></td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+            <td>Tax</td>
+            <td><?php echo Cart::tax(); ?></td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+            <td>Total</td>
+            <td><?php echo Cart::total(); ?></td>
+        </tr>
+    </tfoot>
+    @else
                 <p>You have no items in the shopping cart.</p>
                 @endif
-                </tbody>
             </table>
         </div>
  

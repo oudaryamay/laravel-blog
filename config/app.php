@@ -213,7 +213,8 @@ return [
         'Input' => Illuminate\Support\Facades\Input::class,
         //shopping cart
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
-
+        //Myhelper
+        'Helper' => App\Helpers\Helper::class,
     ],
 
 ];
