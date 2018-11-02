@@ -30,7 +30,7 @@
        <!-- page content -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Pages <small>{{ Html::linkRoute('pages.create' ,'Create new', array(), ['class' => 'btn btn-success'])}}</small></h3>
+                <h3>Pages <small>{{ Html::linkRoute('ob-admin.pages.create' ,'Create new', array(), ['class' => 'btn btn-success'])}}</small></h3>
               </div>
 
               <div class="title_right">
@@ -46,7 +46,7 @@
             </div>
             <?php //echo '<pre>'; print_r($post); echo'</pre>';?>
             <div class="clearfix"></div>
-           {!! Form::model($page, ['route' => ['pages.update',  $page->id], 'method' => 'PUT', 'files' => 'true']) !!}
+           {!! Form::model($page, ['route' => ['ob-admin.pages.update',  $page->id], 'method' => 'PUT', 'files' => 'true']) !!}
             <div class="row">
              <div class="col-md-9 col-sm-9 col-xs-12">
               <div class="x_panel">
@@ -98,7 +98,7 @@
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="x_panel">
-                      {{ Html::linkRoute('pages.index' ,'View all pages', array(), ['class' => 'btn btn-success btn-block'])}}
+                      {{ Html::linkRoute('ob-admin.pages.index' ,'View all pages', array(), ['class' => 'btn btn-success btn-block'])}}
                     </div>
                 </div>
 

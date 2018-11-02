@@ -1,6 +1,6 @@
             @extends('admin')
 
-            @section('title', 'Upddate Tags')
+            @section('title', 'Update Tags')
 
             @section('stylesheets')
 
@@ -14,7 +14,7 @@
        <!-- page content -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Tag <small>{{ Html::linkRoute('tags.store' ,'Create new', array(), ['class' => 'btn btn-default btn-xs'])}}</small></h3>
+                <h3>Tag <small>{{ Html::linkRoute('ob-admin.tags.store' ,'Create new', array(), ['class' => 'btn btn-default btn-xs'])}}</small></h3>
               </div>
 
               <div class="title_right">
@@ -32,10 +32,10 @@
             <div class="clearfix"></div>
                   <div class="row">
              <div class="col-md-12 col-sm-12 col-xs-12">
-               {!! Form::model($tag, ['route' => ['tags.update', $tag->id], 'method' => 'PUT', 'data-parsely-validate' =>'' ]) !!}
+               {!! Form::model($tag, ['route' => ['ob-admin.tags.update', $tag->id], 'method' => 'PUT', 'data-parsely-validate' =>'' ]) !!}
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Update tag {{ Html::linkRoute('tags.index' ,'View all tag', array(), ['class' => 'btn btn-default btn-xs']) }}</h2>
+                  <h2>Update tag {{ Html::linkRoute('ob-admin.tags.index' ,'View all tag', array(), ['class' => 'btn btn-default btn-xs']) }}</h2>
                         <div class="clearfix"></div>
                 </div>
                 <div class="x_content">

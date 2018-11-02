@@ -58,7 +58,7 @@ class TagController extends Controller
         session::flash('success', 'The tag has been successfully created.');
 
         //redirect
-        return redirect()->route('tags.store');
+        return redirect()->route('ob-admin.tags.store');
     }
 
     /**
@@ -145,6 +145,6 @@ class TagController extends Controller
         $tag->delete();
 
         Session::flash('success','The tag was successfully deleted.');
-        return redirect()->route('tags.store');
+        return redirect()->route('ob-admin.tags.store');
     }
 }

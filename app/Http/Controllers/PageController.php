@@ -78,7 +78,7 @@ class pageController extends Controller
         Session::flash('success', 'The page was successfully saved.');
 
         //redirect
-        return redirect()->route('pages.show', $page->id); 
+        return redirect()->route('ob-admin.pages.show', $page->id); 
     }
 
     /**
@@ -159,7 +159,7 @@ class pageController extends Controller
 
         //redirect
 
-        return redirect()->route('pages.show', $page->id); 
+        return redirect()->route('ob-admin.pages.show', $page->id); 
     }
 
     /**
@@ -176,6 +176,6 @@ class pageController extends Controller
 
         Session::flash('success','The page was successfully deleted.');
 
-        return redirect()->route('pages.index');
+        return redirect()->route('ob-admin.pages.index');
     }
 }

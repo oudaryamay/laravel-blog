@@ -11,6 +11,7 @@ return array(
     'AddProfilePicColumnToUserTable' => $baseDir . '/database/migrations/2018_08_01_125123_add_profile_pic_column_to_user_table.php',
     'AddSlugColumnToCategoryTable' => $baseDir . '/database/migrations/2018_06_28_100541_add_slug_column_to_category_table.php',
     'AddSlugToPosts' => $baseDir . '/database/migrations/2018_06_25_064349_add_slug_to_posts.php',
+    'CategoryTableSeeder' => $baseDir . '/database/seeds/CategoryTableSeeder.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2018_06_28_062044_create_categories_table.php',
     'CreateCategoryIdToPosts' => $baseDir . '/database/migrations/2018_06_28_064235_create_category_id_to_posts.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2018_07_11_070621_create_comments_table.php',
@@ -499,7 +500,9 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD_FROM' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
+    'PageTableSeeder' => $baseDir . '/database/seeds/PageTableSeeder.php',
     'Post' => $baseDir . '/database/migrations/2018_06_07_070620_Post.php',
+    'PostTableSeeder' => $baseDir . '/database/seeds/PostTableSeeder.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',
     'SebastianBergmann\\Comparator\\ComparisonFailure' => $vendorDir . '/sebastian/comparator/src/ComparisonFailure.php',
@@ -538,4 +541,5 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UserTableSeeder' => $baseDir . '/database/seeds/UserTableSeeder.php',
 );

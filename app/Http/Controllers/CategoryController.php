@@ -54,7 +54,7 @@ class CategoryController extends Controller
 
         Session::flash('success', 'New category has been successfully saved.');
 
-        return redirect()->route('categories.store');
+        return redirect()->route('ob-admin.categories.store');
     }
 
     /**
@@ -142,6 +142,6 @@ class CategoryController extends Controller
         $category->delete();
 
         Session::flash('success','The category was successfully deleted.');
-        return redirect()->route('categories.store');
+        return redirect()->route('ob-admin.categories.store');
     }
 }

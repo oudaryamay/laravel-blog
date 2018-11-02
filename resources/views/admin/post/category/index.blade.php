@@ -63,7 +63,7 @@
             <div class="row">
                         
              <div class="col-md-4 col-sm-4 col-xs-12">
-               {!! Form::open(['route' => 'categories.store', 'method' => 'POST', 'data-parsely-validate' =>'' ]) !!}
+               {!! Form::open(['route' => 'ob-admin.categories.store', 'method' => 'POST', 'data-parsely-validate' =>'' ]) !!}
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Create new category</h2>
@@ -110,9 +110,9 @@
                           <th scope="row">{{ $category->id }}</th>
                           <td>{{ $category->name }}  <span class="badge badge-info">{{ $category->posts()->count() }}</span></td>
                           <td>{{ $category->slug }}</td>
-                          <td>{!! Html::linkRoute('categories.edit', 'Edit', array($category->id), array('class' => 'btn btn-default btn-xs')) !!}</td>
+                          <td>{!! Html::linkRoute('ob-admin.categories.edit', 'Edit', array($category->id), array('class' => 'btn btn-default btn-xs')) !!}</td>
                           @if($category->id != 1)
-                          <td>{!! Form::open(['route' => ['categories.destroy', $category->id], 'method' => 'DELETE']) !!}
+                          <td>{!! Form::open(['route' => ['ob-admin.categories.destroy', $category->id], 'method' => 'DELETE']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs', 'onclick' => 'return categoryDelete();']) !!}
                             {!! Form::close() !!}</td>
                             @endif

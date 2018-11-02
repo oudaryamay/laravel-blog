@@ -109,7 +109,7 @@ class PostController extends Controller
         Session::flash('success', 'The blog post was successfully saved.');
 
         //redirect
-        return redirect()->route('posts.show', $post->id); 
+        return redirect()->route('ob-admin.posts.show', $post->id); 
     }
 
     /**
@@ -226,7 +226,7 @@ class PostController extends Controller
 
         //redirect
 
-        return redirect()->route('posts.show', $post->id); 
+        return redirect()->route('ob-admin.posts.show', $post->id); 
 
     }
 
@@ -246,6 +246,6 @@ class PostController extends Controller
 
         Session::flash('success','The post was successfully deleted.');
 
-        return redirect()->route('posts.index');
+        return redirect()->route('ob-admin.posts.index');
     }
 }

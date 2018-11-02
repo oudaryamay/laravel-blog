@@ -62,7 +62,7 @@
             <div class="row">
                         
              <div class="col-md-4 col-sm-4 col-xs-12">
-               {!! Form::open(['route' => 'tags.store', 'method' => 'POST', 'data-parsely-validate' =>'' ]) !!}
+               {!! Form::open(['route' => 'ob-admin.tags.store', 'method' => 'POST', 'data-parsely-validate' =>'' ]) !!}
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Create new tag</h2>
@@ -109,8 +109,8 @@
                           <th scope="row">{{ $tag->id }}</th>
                           <td>{{ $tag->name }} <span class="badge badge-info">{{ $tag->posts()->count() }}</span> </td>
                           <td>{{ $tag->slug }}</td>
-                          <td>{!! Html::linkRoute('tags.edit', 'Edit', array($tag->id), array('class' => 'btn btn-default btn-xs')) !!}</td>
-                          <td>{!! Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
+                          <td>{!! Html::linkRoute('ob-admin.tags.edit', 'Edit', array($tag->id), array('class' => 'btn btn-default btn-xs')) !!}</td>
+                          <td>{!! Form::open(['route' => ['ob-admin.tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs', 'onclick' => 'return tagDelete();']) !!}
                             {!! Form::close() !!}</td>
                         </tr>

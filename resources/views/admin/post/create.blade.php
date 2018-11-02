@@ -50,7 +50,7 @@
             </div>
 
             <div class="clearfix"></div>
-            {!! Form::open(array('route' => 'posts.store', 'data-parsely-validate' => '', 'files' => true)) !!}
+            {!! Form::open(array('route' => 'ob-admin.posts.store', 'data-parsely-validate' => '', 'files' => true)) !!}
             <div class="row">
              <div class="col-md-9 col-sm-9 col-xs-12">
               <div class="x_panel">
@@ -102,7 +102,7 @@
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="x_panel">
-                      {{ Html::linkRoute('posts.index' ,'View all posts', array(), ['class' => 'btn btn-success btn-block'])}}
+                      {{ Html::linkRoute('ob-admin.posts.index' ,'View all posts', array(), ['class' => 'btn btn-success btn-block'])}}
                     </div>
                 </div>
 

@@ -31,7 +31,7 @@
        <!-- page content -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Edit Comment <small>{{ Html::linkRoute('comment.index' ,'All Comments', array(), ['class' => 'btn btn-success'])}}</small></h3>
+                <h3>Edit Comment <small>{{ Html::linkRoute('ob-admin.comment.index' ,'All Comments', array(), ['class' => 'btn btn-success'])}}</small></h3>
               </div>
 
               <div class="title_right">
@@ -47,7 +47,7 @@
             </div>
             <?php //echo '<pre>'; print_r($post); echo'</pre>';?>
             <div class="clearfix"></div>
-           {!! Form::model($comment, ['route' => ['comment.update',  $comment->id], 'method' => 'PUT', 'files' => 'true']) !!}
+           {!! Form::model($comment, ['route' => ['ob-admin.comment.update',  $comment->id], 'method' => 'PUT', 'files' => 'true']) !!}
             <div class="row">
              <div class="col-md-9 col-sm-9 col-xs-12">
               <div class="x_panel">
@@ -107,7 +107,7 @@
                          <ul class="legend list-unstyled">
                                 <li>
                                <p>
-                                In response to : {!! Html::linkRoute('posts.edit', $comment->post->title, array($comment->post_id), array('class' => 'btn btn-primary btn-block')) !!}
+                                In response to : {!! Html::linkRoute('ob-admin.posts.edit', $comment->post->title, array($comment->post_id), array('class' => 'btn btn-primary btn-block')) !!}
                                 </p>
                                 </li>
                                 <div class="divider-dashed"></div>

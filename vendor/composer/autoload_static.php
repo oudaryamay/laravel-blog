@@ -337,6 +337,7 @@ class ComposerStaticInitd3c048971bdfde420483467555329ee2
         'AddProfilePicColumnToUserTable' => __DIR__ . '/../..' . '/database/migrations/2018_08_01_125123_add_profile_pic_column_to_user_table.php',
         'AddSlugColumnToCategoryTable' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_100541_add_slug_column_to_category_table.php',
         'AddSlugToPosts' => __DIR__ . '/../..' . '/database/migrations/2018_06_25_064349_add_slug_to_posts.php',
+        'CategoryTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoryTableSeeder.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_062044_create_categories_table.php',
         'CreateCategoryIdToPosts' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_064235_create_category_id_to_posts.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_11_070621_create_comments_table.php',
@@ -825,7 +826,9 @@ class ComposerStaticInitd3c048971bdfde420483467555329ee2
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PageTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PageTableSeeder.php',
         'Post' => __DIR__ . '/../..' . '/database/migrations/2018_06_07_070620_Post.php',
+        'PostTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PostTableSeeder.php',
         'SebastianBergmann\\Comparator\\ArrayComparator' => __DIR__ . '/..' . '/sebastian/comparator/src/ArrayComparator.php',
         'SebastianBergmann\\Comparator\\Comparator' => __DIR__ . '/..' . '/sebastian/comparator/src/Comparator.php',
         'SebastianBergmann\\Comparator\\ComparisonFailure' => __DIR__ . '/..' . '/sebastian/comparator/src/ComparisonFailure.php',
@@ -864,6 +867,7 @@ class ComposerStaticInitd3c048971bdfde420483467555329ee2
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'UserTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UserTableSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

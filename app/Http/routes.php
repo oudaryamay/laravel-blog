@@ -55,17 +55,17 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web','admin']], function () {
 
-Route::resource('posts','PostController');
+Route::resource('ob-admin/posts','PostController');
 //Comments for admin end
-Route::get('ob-admin/comment',['uses' => 'CommentController@index', 'as' => 'comment.index']);
-Route::get('ob-admin/comment/{id}/edit', ['uses' => 'CommentController@edit', 'as' => 'comment.edit']);
-Route::put('ob-admin/comment/{id}', ['uses' => 'CommentController@update', 'as' => 'comment.update']);
-Route::delete('ob-admin/comment/{id}', ['uses' => 'CommentController@destroy', 'as' => 'comment.destroy']);
+Route::get('ob-admin/comment',['uses' => 'CommentController@index', 'as' => 'ob-admin.comment.index']);
+Route::get('ob-admin/comment/{id}/edit', ['uses' => 'CommentController@edit', 'as' => 'ob-admin.comment.edit']);
+Route::put('ob-admin/comment/{id}', ['uses' => 'CommentController@update', 'as' => 'ob-admin.comment.update']);
+Route::delete('ob-admin/comment/{id}', ['uses' => 'CommentController@destroy', 'as' => 'ob-admin.comment.destroy']);
 //Category route
-Route::resource('categories', 'CategoryController', ['except' => 'create']);
-Route::resource('tags', 'TagController', ['except' => 'create']);
+Route::resource('ob-admin/categories', 'CategoryController', ['except' => 'create']);
+Route::resource('ob-admin/tags', 'TagController', ['except' => 'create']);
 //Pages route
-Route::resource('pages','PageController');
+Route::resource('ob-admin/pages','PageController');
 //media
 Route::get('ob-admin/media',['uses' => 'MediaController@getMedia', 'as' => 'media.index']);
 Route::get('ob-admin/media/add-new',['uses' => 'MediaController@newMedia', 'as' => 'media.new']);

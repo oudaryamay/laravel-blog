@@ -13,7 +13,7 @@
 				<strong>Comment:</strong> {{ $comment->comment }}
 			</p>
 
-			{{ Form::open(['route' => ['comments.destroy', $comment->id], 'method' => 'DELETE']) }}
+			{{ Form::open(['route' => ['ob-admin.comments.destroy', $comment->id], 'method' => 'DELETE']) }}
 				{{ Form::submit('YES DELETE THIS COMMENT', ['class' => 'btn btn-lg btn-block btn-danger']) }}
 			{{ Form::close() }}
 		</div>

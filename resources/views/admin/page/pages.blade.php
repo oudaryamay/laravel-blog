@@ -7,7 +7,7 @@
        <!-- page content -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Pages {{ Html::linkRoute('pages.create' ,'Create new', array(), ['class' => 'btn btn-success'])}}</h3>
+                <h3>Pages {{ Html::linkRoute('ob-admin.pages.create' ,'Create new', array(), ['class' => 'btn btn-success'])}}</h3>
               </div>
 
               <div class="title_right">
@@ -90,10 +90,10 @@
                             <td class="page-slug">{{$page->slug}}</td>
                             <td class="page-date">{{date('M j, Y', strtotime($page->created_at))}}</td>
                             <td class="post-edit">
-                            {!! Html::linkRoute('pages.edit', 'Edit', array($page->id), array('class' => 'btn btn-primary btn-block')) !!}
+                            {!! Html::linkRoute('ob-admin.pages.edit', 'Edit', array($page->id), array('class' => 'btn btn-primary btn-block')) !!}
                             </td>
                             <td class="post-delete last">
-                            {!! Form::open(['route' => ['pages.destroy', $page->id], 'method' => 'DELETE']) !!}
+                            {!! Form::open(['route' => ['ob-admin.pages.destroy', $page->id], 'method' => 'DELETE']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block', 'onclick' => 'return pageDelete();']) !!}
                             {!! Form::close() !!}
                             </td>

@@ -84,5 +84,5 @@
                    @endforeach
 
                </div>
-               <div class="button-wrapper"><a class="button w-button" href="/all-posts">←&nbsp;View all posts</a></div>
+               <div class="button-wrapper"><a class="button w-button" href="/blog">←&nbsp;View all posts</a></div>
               @endsection

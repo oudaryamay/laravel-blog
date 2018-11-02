@@ -93,8 +93,8 @@
                             <td class="post-slug">{{ substr(strip_tags($comment->comment), 0, 50) }}{{ strlen(strip_tags($comment->comment)) > 50 ? '...' : "" }}</td>
                              <td class="post-slug">{{ $comment->post->title }}</td>
                             <td class="post-date">{{date('M j, Y', strtotime($comment->created_at))}}</td>
-                            <td class="post-edit">{!! Html::linkRoute('comment.edit', 'Edit', array($comment->id), array('class' => 'btn btn-primary btn-block')) !!}</td>
-                            <td class="post-delete last"> {!! Form::open(['route' => ['comment.destroy', $comment->id], 'method' => 'DELETE']) !!}
+                            <td class="post-edit">{!! Html::linkRoute('ob-admin.comment.edit', 'Edit', array($comment->id), array('class' => 'btn btn-primary btn-block')) !!}</td>
+                            <td class="post-delete last"> {!! Form::open(['route' => ['ob-admin.comment.destroy', $comment->id], 'method' => 'DELETE']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-block', 'onclick' => 'return commentDelete();']) !!}
                             {!! Form::close() !!}</td>
                           </tr>

@@ -14,7 +14,7 @@
        <!-- page content -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Categories <small>{{ Html::linkRoute('categories.store' ,'Create new', array(), ['class' => 'btn btn-default btn-xs'])}}</small></h3>
+                <h3>Categories <small>{{ Html::linkRoute('ob-admin.categories.store' ,'Create new', array(), ['class' => 'btn btn-default btn-xs'])}}</small></h3>
               </div>
 
               <div class="title_right">
@@ -32,10 +32,10 @@
             <div class="clearfix"></div>
                   <div class="row">
              <div class="col-md-12 col-sm-12 col-xs-12">
-               {!! Form::model($category, ['route' => ['categories.update', $category->id], 'method' => 'PUT', 'data-parsely-validate' =>'' ]) !!}
+               {!! Form::model($category, ['route' => ['ob-admin.categories.update', $category->id], 'method' => 'PUT', 'data-parsely-validate' =>'' ]) !!}
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Update category {{ Html::linkRoute('categories.index' ,'View all categories', array(), ['class' => 'btn btn-default btn-xs']) }}</h2>
+                  <h2>Update category {{ Html::linkRoute('ob-admin.categories.index' ,'View all categories', array(), ['class' => 'btn btn-default btn-xs']) }}</h2>
                         <div class="clearfix"></div>
                 </div>
                 <div class="x_content">

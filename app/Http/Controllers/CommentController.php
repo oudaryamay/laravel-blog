@@ -100,7 +100,7 @@ class CommentController extends Controller
 
         Session::flash('success', 'The Comment has been successfullly updated');
 
-        return redirect()->route('comment.edit', $comment->id);
+        return redirect()->route('ob-admin.comment.edit', $comment->id);
     }
 
     /**
@@ -130,6 +130,6 @@ class CommentController extends Controller
 
         Session::flash('success', 'The comment has been successfully deleted.');
 
-        return redirect()->route('comment.index');
+        return redirect()->route('ob-admin.comment.index');
     }
 }
