@@ -38,6 +38,11 @@
                       <li>{{ Html::linkRoute('ob-admin.products.create', 'Add New', array(), []) }}</li>
                       </ul>
                   </li>
+                  <li><a><i class="fa fa-cog"></i> Appearance <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li>{{ Html::linkRoute('ob-admin.settings.option', 'Settings', array(), []) }}</li>
+                    </ul>
+                  </li>
                </ul>
               </div>
             </div>

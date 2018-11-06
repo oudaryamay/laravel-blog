@@ -341,6 +341,7 @@ class ComposerStaticInitd3c048971bdfde420483467555329ee2
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_062044_create_categories_table.php',
         'CreateCategoryIdToPosts' => __DIR__ . '/../..' . '/database/migrations/2018_06_28_064235_create_category_id_to_posts.php',
         'CreateCommentsTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_11_070621_create_comments_table.php',
+        'CreateOptionsTable' => __DIR__ . '/../..' . '/database/migrations/2018_11_05_113554_create_options_table.php',
         'CreatePagesTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_19_082857_create_pages_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePostTagTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_04_125353_create_post_tag_table.php',

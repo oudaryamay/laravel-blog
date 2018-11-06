@@ -15,6 +15,7 @@ return array(
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2018_06_28_062044_create_categories_table.php',
     'CreateCategoryIdToPosts' => $baseDir . '/database/migrations/2018_06_28_064235_create_category_id_to_posts.php',
     'CreateCommentsTable' => $baseDir . '/database/migrations/2018_07_11_070621_create_comments_table.php',
+    'CreateOptionsTable' => $baseDir . '/database/migrations/2018_11_05_113554_create_options_table.php',
     'CreatePagesTable' => $baseDir . '/database/migrations/2018_07_19_082857_create_pages_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePostTagTable' => $baseDir . '/database/migrations/2018_07_04_125353_create_post_tag_table.php',

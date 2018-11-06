@@ -141,7 +141,9 @@
                       </div>
                         <div class="x_content">
                           <div class="form-group">
+                            <?php if( $page->image != null ) : ?>
                             <img src="{{url('/uploads/' . $page->image)}}" width="170" height="150">
+                          <?php endif; ?>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                               <br>
                               {{ Form::label('featured_img', 'Upload a image') }}

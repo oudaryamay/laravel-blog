@@ -55,6 +55,10 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web','admin']], function () {
 
+//Setings controller
+Route::post('ob-admin/settings/update',['uses' => 'SettingsController@optionUpdate', 'as' => 'ob-admin.settings.option.update']);
+Route::get('ob-admin/settings',['uses' => 'SettingsController@option', 'as' => 'ob-admin.settings.option']);
+//post controller
 Route::resource('ob-admin/posts','PostController');
 //Comments for admin end
 Route::get('ob-admin/comment',['uses' => 'CommentController@index', 'as' => 'ob-admin.comment.index']);
